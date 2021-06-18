@@ -4,19 +4,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 body {
-background: url(" https://image.freepik.com/free-vector/crescent-moon-stars-clear-sky-background_1017-26919.jpg") ;
-background-position: centre ;
-background-repeat:no-repeat ;
-background-attachment: fixed ;
-background-size: cover ;
 }
 .welcome {
 color: white ;
  box-shadow: 0 0 5px 0 ; 
-background: transparent ;
-backdrop-filter: blur(7px); 
+background: cyan ;
+	-webkit-animation: color_change 1s infinite alternate;
+	-moz-animation: color_change 1s infinite alternate;
+	-ms-animation: color_change 1s infinite alternate;
+	-o-animation: color_change 1s infinite alternate;
+	animation: color_change 1s infinite alternate;
+
 height: 100vh ;
 
+}
+@keyframes color_change {
+0% { background-color: cyan }
+20% { background-color: chartreuse }
+40% { background-color: orange }
+60% {background-color:  babypink }
+80% { background-color: yellow }
 }
 </style>
 </head>
