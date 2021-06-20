@@ -26,6 +26,7 @@ font-family: monospace ;
 padding : 5px ;
 margin-top: 10px ; 
 margin-bottom: 10px ;
+display: none
 }
 /* On mouse-over, add a deeper shadow */
 .card:hover {
@@ -64,6 +65,17 @@ display: inline ;
 <h2>Groups</h2>
 <div class="card gro"><h3>Demo Group</h3><button class="join">Join</button><br> <p class="lang" > Language : Urdu </p><p class="c-d">Group Description</p></div>
 </section>
+<script>
+let observer = new IntersectionObserver(
+(entries, observer) => { 
+entries.forEach(entry => {
+    /* Placeholder replacement */
+    entry.target.display ="block" ;
+    observer.unobserve(entry.target);
+  });
+}, 
+{rootMargin: "0px 0px -25vw 0px"});
+document.querySelectorAll('card').forEach(img => { observer.observe(img) });
 </body>
 </html>
 
