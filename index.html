@@ -53,7 +53,6 @@ display: inline ;
 </style>
 </head>
 <body>
-<div style="height: 500vw ; background-color: blue"></div>
 <section class="welcome card">
 <h1>Title</h1>
 <p style="font-family: sans-serif" >Here is the space for some description</p>  
@@ -65,18 +64,6 @@ display: inline ;
 <section class="groups">
 <h2>Groups</h2>
 <div class="card gro"><h3>Demo Group</h3><button class="join">Join</button><br> <p class="lang" > Language : Urdu </p><p class="c-d">Group Description</p></div>
-</section>
-<script>
-let observer = new IntersectionObserver(
-(entries, observer) => { 
-entries.forEach(entry => {
-    /* Placeholder replacement */
-    entry.target.style.display ="block" ;
-    observer.unobserve(entry.target);
-  });
-}, 
-{rootMargin: "0px 0px -500px 0px"});
-document.querySelectorAll('.card').forEach(img => { observer.observe(img) });
-</script></body>
+</section></body>
 </html>
 
